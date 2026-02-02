@@ -211,12 +211,44 @@
                 <a href="https://billlayneinsurance.com/get-quote" class="hidden md:block bg-gradient-to-r from-primary-600 to-indigo-600 hover:from-primary-700 hover:to-indigo-700 text-white px-7 py-3 rounded-full text-xs font-black shadow-xl shadow-primary-500/30 transition-all hover:scale-105 hover:shadow-primary-500/50 btn-shine">
                     GET FREE QUOTE
                 </a>
-                <a href="https://www.billlayneinsurance.com" class="p-2 rounded-full transition-colors focus:outline-none hover:bg-slate-100 text-slate-600" aria-label="Back to Home">
-                    <i class="fas fa-home text-lg"></i>
-                </a>
+                <button id="menu-btn" class="p-2 rounded-full transition-colors focus:outline-none hover:bg-slate-100 text-slate-600" aria-label="Open Menu">
+                    <div class="w-7 h-5 flex flex-col justify-between relative">
+                        <span class="nav-hamburger-line w-full h-0.5 rounded-full bg-slate-900 transition-all origin-right"></span>
+                        <span class="nav-hamburger-line w-full h-0.5 rounded-full bg-slate-900 transition-all origin-right"></span>
+                        <span class="nav-hamburger-line w-full h-0.5 rounded-full bg-slate-900 transition-all origin-right"></span>
+                    </div>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- MOBILE DRAWER -->
+    <div id="menu-overlay" class="fixed inset-0 bg-slate-900/60 z-[90] backdrop-blur-md transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+    <div id="menu-drawer" class="fixed top-0 right-0 w-[85vw] md:w-96 h-full bg-white z-[100] shadow-2xl transform translate-x-full transition-transform duration-500 flex flex-col">
+        <div class="p-6 flex justify-between items-center border-b border-slate-100 bg-slate-50">
+            <h3 class="text-lg font-display font-black text-slate-900">Agency Menu</h3>
+            <button id="menu-close" class="w-10 h-10 flex items-center justify-center rounded-full bg-white border border-slate-200 text-slate-500 hover:text-red-500 transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex-1 overflow-y-auto p-4 space-y-2">
+            <a href="https://www.billlayneinsurance.com" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform"><i class="fas fa-home"></i></div> Home</a>
+            <a href="https://billlayneinsurance.com/areas-we-serve.html" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center text-purple-500 group-hover:scale-110 transition-transform"><i class="fas fa-map-marked-alt"></i></div> Areas We Serve</a>
+            <a href="https://billlayne.github.io/Auto-Insurance-Center/" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform"><i class="fas fa-car"></i></div> Auto Center</a>
+            <a href="https://billlayne.github.io/NC-Home-Insurance.github.io/" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-green-50 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform"><i class="fas fa-house"></i></div> Home Insurance</a>
+            <a href="https://billlayne.github.io/NC-Insurance-Claims-Center.github.io/" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform"><i class="fas fa-file-medical-alt"></i></div> Claims Center</a>
+            <a href="https://billlayne.github.io/Resources/" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-500 group-hover:scale-110 transition-transform"><i class="fas fa-book"></i></div> Resources</a>
+            <a href="https://billlayne.github.io/ethereal-blog-landing/" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-500 group-hover:scale-110 transition-transform"><i class="fas fa-blog"></i></div> Blog</a>
+            <a href="#" class="group block p-4 rounded-xl bg-teal-50 text-teal-700 font-bold flex items-center gap-4"><div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center text-teal-600 shadow-sm"><i class="fas fa-video"></i></div> Videos</a>
+            <a href="https://billlayneinsurance.com/contact-us.html" class="group block p-4 rounded-xl hover:bg-slate-50 text-slate-600 font-bold flex items-center gap-4 transition-colors"><div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-slate-500 group-hover:scale-110 transition-transform"><i class="fas fa-envelope"></i></div> Contact Us</a>
+        </div>
+        <div class="p-6 border-t border-slate-100 bg-slate-50">
+            <a href="tel:3368351993" class="block w-full py-4 bg-slate-900 text-white text-center rounded-xl font-bold hover:bg-primary-600 transition-colors shadow-lg">Call Agent Now</a>
+            <div class="text-center mt-3 text-xs text-slate-400 font-bold uppercase tracking-wider">
+                <i class="fas fa-clock mr-1"></i> Mon-Fri: 9am - 5pm
+            </div>
+        </div>
+    </div>
 
     <!-- HERO SECTION -->
     <header class="relative pt-12 pb-16 md:pt-20 md:pb-24 bg-vivid-hero text-white overflow-hidden min-h-[60vh] md:min-h-[70vh] flex items-center">
@@ -583,6 +615,31 @@
     <!-- SCRIPTS -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // ===================
+            // MOBILE MENU LOGIC
+            // ===================
+            const menuBtn = document.getElementById('menu-btn');
+            const menuClose = document.getElementById('menu-close');
+            const menuDrawer = document.getElementById('menu-drawer');
+            const menuOverlay = document.getElementById('menu-overlay');
+
+            const toggleMenu = (show) => {
+                menuDrawer.classList.toggle('translate-x-full', !show);
+                menuOverlay.classList.toggle('opacity-0', !show);
+                menuOverlay.classList.toggle('pointer-events-none', !show);
+                document.body.style.overflow = show ? 'hidden' : '';
+            };
+            if(menuBtn) menuBtn.addEventListener('click', () => toggleMenu(true));
+            if(menuClose) menuClose.addEventListener('click', () => toggleMenu(false));
+            if(menuOverlay) menuOverlay.addEventListener('click', () => toggleMenu(false));
+
+            // Auto-close menu when any link inside drawer is clicked
+            if(menuDrawer) {
+                menuDrawer.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => toggleMenu(false));
+                });
+            }
+
             // ===================
             // INLINE VIDEO PLAYER
             // ===================
